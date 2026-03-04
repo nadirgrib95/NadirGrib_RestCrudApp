@@ -3,6 +3,9 @@ package com.example.HomeExercise.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
+/**
+ * This is the entity that would be mapped to the data sent between the DB and the project server.
+ */
 @Entity
 public class Student {
 
@@ -12,14 +15,27 @@ public class Student {
     private double fees;
     private String subName;
 
+    /**
+     * Default constructor
+     */
     public Student () {
     }
 
+    /**
+     * Constructor to initialise a new student
+     * @param id
+     * @param name
+     * @param fees
+     */
     public Student(Long id, String name, double fees) {
         this.id = id;
         this.name = name;
         this.fees = fees;
     }
+
+    /***************
+     * GETTERS AND SETTERS SECTION for entity attributes
+     ***************/
 
     public Long getId() {
         return id;
